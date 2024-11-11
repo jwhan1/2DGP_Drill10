@@ -3,7 +3,7 @@ import game_framework
 
 import game_world
 from grass import Grass
-from boy import Boy
+from bird import Bird
 
 # boy = None
 
@@ -14,18 +14,16 @@ def handle_events():
             game_framework.quit()
         elif event.type == SDL_KEYDOWN and event.key == SDLK_ESCAPE:
             game_framework.quit()
-        else:
-            boy.handle_event(event)
 
 def init():
     global grass
-    global boy
+    global bird
 
     grass = Grass()
     game_world.add_object(grass, 0)
-
-    boy = Boy()
-    game_world.add_object(boy, 1)
+    bird = [Bird() for i in range(10)]
+    for o in bird:
+        game_world.add_object(o, 1)
 
 
 def finish():

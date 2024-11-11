@@ -2,8 +2,8 @@ from pico2d import *
 
 class Grass:
     def __init__(self):
-        self.image = load_image('Labs\Lecture15_Time\grass.png')
-        self.ruler_image = load_image('Labs/Lecture15_Time/ruler.png')
+        self.image = load_image('grass.png')
+        self.ruler_image = load_image('ruler.png')
 
     def update(self):
         pass
